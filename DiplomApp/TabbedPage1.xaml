@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiplomApp.TabbedPage1" BackgroundColor="White">
+    <!--Pages can be added as references or inline-->
+    <ContentPage x:Name="tab1" Title="Главная" IconImageSource="Domic.png" >
+        <ScrollView>
+            <StackLayout Padding="15,10" BackgroundColor="White">
+                <StackLayout HorizontalOptions="Fill">
+                    <Frame BackgroundColor="AliceBlue" WidthRequest="140" HeightRequest="40" CornerRadius="20">
+                        <Picker x:Name="myPicker" BackgroundColor="AliceBlue" TitleColor="Black"  TextColor="Black" Title="Выбор объекта" >
+                            <Picker.Items>
+                                <x:String>Объект 1</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+                    <Button x:Name="switch1"  Text="Объект на охране" BackgroundColor="Green" CornerRadius="20"></Button>
+                </StackLayout>
+                <Image Source="PrimerDoma.jpg" Margin="0,10"></Image>
+                <Label Margin="5,10" Text="Управление доступом" TextColor="Black" FontSize="Title"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="65"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="butt1" BackgroundColor="AliceBlue" Text="Поставить на охрану" TextColor="Black" CornerRadius="20" Grid.Column="0" Grid.Row="0" Clicked="Butt1_Clicked"></Button>
+                    <Button x:Name="butt2" BackgroundColor="AliceBlue" Text="Снять с охраны" TextColor="Black" CornerRadius="20" Grid.Column="1" Grid.Row="0" Clicked="Butt2_Clicked"></Button>
+                </Grid>
+                <Label Margin="5,10" Text="Управление объектом" TextColor="Black" FontSize="Title"></Label>
+                <Button x:Name="butt3" BackgroundColor="AliceBlue" Text="Видеонаблюдение" TextColor="Black" CornerRadius="20" ></Button>
+                <Button x:Name="butt4" BackgroundColor="AliceBlue" Text="Проверка КТС" TextColor="Black" CornerRadius="20" ></Button>
+                <Button x:Name="butt5" BackgroundColor="AliceBlue" Text="Доверенные лица" TextColor="Black" CornerRadius="20" ></Button>
+                <Button x:Name="butt6" BackgroundColor="AliceBlue" Text="Оплата" TextColor="Black" CornerRadius="20" ></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage x:Name="tab2" Title="Поддержка" IconImageSource="Supp.png" >
+        <ScrollView>
+            <StackLayout Padding="15,10" BackgroundColor="White">
+                <Label Margin="5,10" Text="Справочная информация" TextColor="Black" FontSize="Title"></Label>
+                <Button x:Name="butt7" BackgroundColor="FloralWhite" Text="Частые вопросы" TextColor="Black" HorizontalOptions="Start" ></Button>
+                <Button x:Name="butt8" BackgroundColor="#C8F3FF" Text="Чат с поддержкой" TextColor="Black" HorizontalOptions="Start" ></Button>
+                <Button x:Name="butt9" BackgroundColor="AntiqueWhite" Text="Инструкции и документы" TextColor="Black" HorizontalOptions="Start"></Button>
+                <Button x:Name="butt10" BackgroundColor="YellowGreen" Text="Способы оплаты" TextColor="Black" HorizontalOptions="Start" ></Button>
+                <Label Margin="5,10" Text="Контактные данные" TextColor="Black" FontSize="Title"></Label>
+                <Button x:Name="butt11" BackgroundColor="AliceBlue" Text="Телефон" TextColor="Black" HorizontalOptions="Start"></Button>
+                <Button x:Name="butt12" BackgroundColor="#C8F3FF" Text="Написать Нам " TextColor="Black" HorizontalOptions="Start" ></Button>
+                <Label></Label>
+                <Label></Label>
+                <Label  Margin="5,2" Text="Версия 1.0" TextColor="DimGray" HorizontalOptions="End"></Label>
+                <Label  Margin="5,10" Text="Сделал Бережной Александр" TextColor="DimGray" HorizontalOptions="End"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage x:Name="tab3" Title="Ещё" IconImageSource="tabs.png" >
+        <ScrollView>
+            <StackLayout Padding="15,10" BackgroundColor="White">
+                <Frame BackgroundColor="AliceBlue" >
+                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="userprofil.png" Margin="0,5"></Image>
+                    <Label  Grid.Column="1" Text="Название Профиля" FontSize="Body" HorizontalOptions="Center" Margin="0,15" TextColor="Black"></Label>
+                </Grid>
+                </Frame>
+                <Button x:Name="butt13" Margin="0,5" BackgroundColor="AntiqueWhite" Text="Подключить объект +" TextColor="Black" HorizontalOptions="FillAndExpand" ></Button>
+                <Button x:Name="butt14" Margin="0,5" BackgroundColor="FloralWhite" Text="Заказать дооборудование +" TextColor="Black" HorizontalOptions="Fill" ></Button>
+                <Button x:Name="butt15" Margin="0,5" BackgroundColor="#C8F3FF" Text="Добавить видеонаблюдение +" TextColor="Black" HorizontalOptions="Fill"></Button>
+                <Button x:Name="butt16" Margin="0,5" BackgroundColor="YellowGreen" Text="% Акции" TextColor="Black" HorizontalOptions="Fill" ></Button>
+                <Button x:Name="butt17" Margin="0,5" BackgroundColor="AliceBlue" Text="Оставить отзыв" TextColor="Black" HorizontalOptions="Fill" ></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>

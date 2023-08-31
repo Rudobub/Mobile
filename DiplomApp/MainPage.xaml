@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiplomApp.MainPage" BackgroundColor="White"
+             >
+    <StackLayout>
+        <Image Source="Lpage" Aspect="AspectFit"></Image>
+        <Entry x:Name="emailField" Placeholder="Введите Адрес Эл.почты:" PlaceholderColor="Black" Margin="15,0" FontSize="17" TextColor="Black" Opacity="0.6"></Entry>
+        <Entry x:Name="passField" Placeholder="Введите Пароль:" PlaceholderColor="Black" FontSize="17" Margin="15,10" TextColor="Black" IsPassword="True" Opacity="0.6"></Entry>
+        <Label></Label>
+        <Button x:Name="nextButton" Text="Нажать для авторизации" TextColor="Black" CornerRadius="5" Margin="15,0" BackgroundColor="#2BB3E1" Clicked="ButtonClicked"></Button>
+        <Label x:Name="errorText" Text="" TextColor="Red" FontSize="15"></Label>
+    </StackLayout>
+
+</ContentPage>
